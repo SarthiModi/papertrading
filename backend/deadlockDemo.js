@@ -1,5 +1,3 @@
-// VIVA DEMO: a REAL database deadlock, then the fix.   node scripts/deadlockDemo.js
-// Two transactions each need two account rows. If they lock them in OPPOSITE orders they deadlock.
 import { pool } from '../src/db/pool.js';
 import { redis } from '../src/redis/client.js';
 import { registerUser } from '../src/services/authService.js';
