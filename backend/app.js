@@ -24,11 +24,6 @@ export function createApp() {
 
   app.use('/api/health', healthRoutes);
   app.use('/api/auth', authRoutes);
-  app.use('/api/stocks', stockRoutes);
-  app.use('/api/orders', orderRoutes);
-  app.use('/api/portfolio', portfolioRoutes);
-  app.use('/api/watchlist', watchlistRoutes);
-  app.use('/api/system', systemRoutes);
 
   app.use(notFound);
   app.use(errorHandler);
