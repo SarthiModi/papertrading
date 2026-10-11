@@ -30,7 +30,7 @@ TradeHawk is a web-based paper trading application that allows users to trade st
 
 ## Objective
 
-To provide a risk-free trading environment while demonstrating **OS concepts** such as scheduling, synchronization, and resource management, along with **DBMS concepts** such as normalization, transactions, and concurrency control.
+To provide a risk-free trading environment while demonstrating **OS concepts** such as scheduling, synchronization, and resource management, along with **DBMS concepts** such as normalization, transactions, and concurrency control./
 
 ## Team
 
