@@ -20,7 +20,7 @@ export function requireAuth(req, res, next) {
 // Used by the WebSocket server, which has no Express req
 export function verifyToken(token) {
   try {
-    retur String(jwt.verify(token, config.jwtSecret).sub);
+    return String(jwt.verify(token, config.jwtSecret).sub);
   } catch (err) {
     return null;
   }
