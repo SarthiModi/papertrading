@@ -18,6 +18,7 @@ export function requireAuth(req, res, next) {
 }
 
 // Used by the WebSocket server, which has no Express req
+// Validates WebSocket authentication tokens and extracts the associated user ID.
 export function verifyToken(token) {
   try {
     return String(jwt.verify(token, config.jwtSecret).sub);
