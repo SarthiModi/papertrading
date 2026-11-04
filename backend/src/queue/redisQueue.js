@@ -138,6 +138,7 @@ export async function reapExpired(maxAttempts = config.queue.maxAttempts) {
   return { requeued, deadJobIds };
 }
 
+// Collects queue metrics to monitor job distribution and processing activity.
 export async function queueStats() {
   const [ready, processing, delayed, dead] = await Promise.all([
     redis.zcard(KEYS[0]), redis.zcard(KEYS[1]), redis.zcard(KEYS[2]), redis.zcard(KEYS[6]),
