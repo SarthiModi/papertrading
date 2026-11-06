@@ -102,8 +102,9 @@ export const CandleChart = ({ candles, livePrice, height = 320 }) => {
     }
   }, [candles]);
 
-  // ── Live price: update the last candle's close in real-time ─────────────
-  useEffect(() => {
+  // ── Live price synchronization with the latest market tick ──────────────
+// Keeps the displayed candle aligned with incoming price updates.
+useEffect(() => {
     if (!seriesRef.current || !candles?.length || !livePrice) return;
 
     try {
