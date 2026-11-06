@@ -136,6 +136,7 @@ async function executeFill(client, orderId, quote, hooks) {
 }
 
 // UNIQUE (order_id, fill_number) means a second execution of the same order fails right here.
+// Persists the completed order execution details for transaction history and auditing.
 function insertTransaction(client, order, quote, total, realizedPnl) {
   return client.query(
     `INSERT INTO transactions (order_id, fill_number, user_id, stock_id, side, quantity, execution_price, total_amount, realized_pnl, quote_timestamp, quote_source)
