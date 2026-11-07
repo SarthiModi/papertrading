@@ -21,7 +21,7 @@ TradeHawk is a web-based paper trading application that allows users to trade st
 * LRU/LFU cache management
 * Database transactions and concurrency control
 
-## Technologies
+## Technologies Used
 
 * **Frontend:** React
 * **Backend:** Node.js / Express
