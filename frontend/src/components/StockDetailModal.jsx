@@ -50,14 +50,14 @@ export const StockDetailModal = ({ stock, onClose, onTrade }) => {
   const toggleWatchlist = async () => {
     setWatchlistLoading(true);
     try {
-      if (isWatched) {
+      if (isWatched) {  //delete watchlist id
         await api.delete(`/watchlist/${stock.id}`);
         setIsWatched(false);
-      } else {
+      } else {    //delete watchlist symbol
         await api.post("/watchlist", { symbol: stock.symbol });
         setIsWatched(true);
       }
-    } catch (err) {
+    } catch (err) {   // watchlist toggle failed
       console.error("Watchlist toggle failed:", err.message);
     } finally {
       setWatchlistLoading(false);
