@@ -24,7 +24,8 @@ export const App = () => {
     setDetailStock(stock);
   };
 
-  const handleTrade = (stock) => {
+ // Transition from stock details to the order placement workflow.
+const handleTrade = (stock) =>  {
     setDetailStock(null);
     setOrderStock(stock);
   };
